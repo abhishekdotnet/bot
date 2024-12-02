@@ -70,7 +70,7 @@ const Assistant = () => {
             var apiResponse = await generateAPIResponse(command);
             if (apiResponse.toLowerCase().includes("google") && apiResponse.toLowerCase().includes("gemini")) {
                 // If both words are found, replace them
-                apiResponse = apiResponse.replace(/google/g, "Abhishek").replace(/gemini/g, "Rishu");
+                apiResponse = apiResponse.replace("google", "Abhishek").replace("gemini", "Rishu");
             }
             speak(apiResponse);
             newMessages.push({ text: apiResponse, user: false });
