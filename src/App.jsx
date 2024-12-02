@@ -147,7 +147,7 @@ const Assistant = () => {
 
     return (
         <div className="App">
-            <img src="../public/logom.png" alt="Rishu Logo" id="logo" />
+            <img src="/logom.png" alt="Rishu Logo" id="logo" />
             <h1>I'm <span>Rishu</span>, Your Virtual Assistant</h1>
 
             <div className="chat-container">
@@ -158,10 +158,10 @@ const Assistant = () => {
                 ))}
             </div>
 
-            <img src="../public/voice.gif" alt="Listening" id="voice" className={isListening ? 'active' : ''} />
+            <img src="/voice.gif" alt="Listening" id="voice" className={isListening ? 'active' : ''} />
 
             <button onClick={handleButtonClick}>
-                <img src="../public/mic.svg" alt="microphone" />
+                <img src="/mic.svg" alt="microphone" />
                 Click here to talk
             </button>
         </div>
