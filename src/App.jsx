@@ -40,11 +40,11 @@ const Assistant = () => {
     const wishMe = () => {
         const hours = new Date().getHours();
         if (hours < 12) {
-            speak("Good Morning Sir");
+            speak("Good Morning Abhishek");
         } else if (hours < 16) {
-            speak("Good Afternoon Sir");
+            speak("Good Afternoon Abhishek");
         } else {
-            speak("Good Evening Sir");
+            speak("Good Evening Abhishek");
         }
     };
 
@@ -70,7 +70,9 @@ const Assistant = () => {
             var apiResponse = await generateAPIResponse(command);
             if (apiResponse.toLowerCase().includes("google") && apiResponse.toLowerCase().includes("gemini")) {
                 // If both words are found, replace them
-                apiResponse = apiResponse.replace("google", "Abhishek").replace("gemini", "Rishu");
+
+                apiResponse = apiResponse.toLowerCase().replace("google", "Abhishek").replace("gemini", "Rishu");
+                console.log(apiResponse);
             }
             speak(apiResponse);
             newMessages.push({ text: apiResponse, user: false });
@@ -148,7 +150,7 @@ const Assistant = () => {
     return (
         <div className="App">
             <img src="/logom.png" alt="Rishu Logo" id="logo" />
-            <h1>I'm <span>Rishu</span>, Your Virtual Assistant</h1>
+            <h1>I'm <span>Rishu</span>, Your Virtual AI Assistant</h1>
 
             <div className="chat-container">
                 {messages.map((message, index) => (
