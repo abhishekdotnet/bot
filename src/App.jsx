@@ -149,7 +149,7 @@ const Assistant = () => {
 
     return (
         <div className="App">
-            <img src="/logom.png" alt="Rishu Logo" id="logo" />
+            <img src="/logom.png" alt="Rishu Logo" id="logo"/>
             <h1>I'm <span>Rishu</span>, Your Virtual AI Assistant</h1>
 
             <div className="chat-container">
@@ -160,12 +160,15 @@ const Assistant = () => {
                 ))}
             </div>
 
-            <img src="/voice.gif" alt="Listening" id="voice" className={isListening ? 'active' : ''} />
+            <img src="/voice.gif" alt="Listening" id="voice" className={isListening ? 'active' : ''}/>
 
             <button onClick={handleButtonClick}>
-                <img src="/mic.svg" alt="microphone" />
+                <img src="/mic.svg" alt="microphone"/>
                 Click here to talk
             </button>
+            <div className="footer-text">
+                <p>Trained on Google LLM.</p>
+            </div>
         </div>
     );
 };

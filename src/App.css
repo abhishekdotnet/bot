@@ -70,6 +70,20 @@ button:hover {
   background-color: #00e600;
   transform: scale(1.05);
 }
+.footer-text {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-text p {
+  margin: 0;
+}
 
 button img {
   width: 30px;
